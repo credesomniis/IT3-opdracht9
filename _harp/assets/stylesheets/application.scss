@@ -1,0 +1,182 @@
+/* Parallax base styles
+  --------------------------------------------- */
+
+.parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+.parallax__group {
+    position: relative;
+    height: 300px; /* fallback for older browsers */
+    height: 15em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+}
+
+.parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+}
+
+.parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+}
+
+body, html {
+    overflow: hidden;
+}
+
+body {
+    font: 100%;
+    background: white;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+}
+
+.parallax {
+    font-size: 200%;
+}
+
+   /* centre the content in the parallax layers */
+.head {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 2.3em;
+    color: white;
+}
+
+
+.title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 2.3em;
+    color: #FFD700;
+    font-family: 'Limelight', cursive;
+}
+
+.number {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 2.3em;
+    color: white;
+    font-family: 'Dosis', cursive;
+}
+
+
+
+  /* style the groups
+  --------------------------------------------- */
+
+#group1{
+      font-family: 'Limelight', cursive;
+  }
+
+#group3, #group5, #group7, #group9, #group11, #group13, #group15, #group17, #group19{
+    z-index: 20; /* slide over group 2 */
+  }
+
+#group2, #group4, #group6, #group8, #group10, #group12
+, #group14, #group16, #group18, #group20{
+    z-index: 3; /* slide under groups 1 and 3 */
+  }
+
+#group1 .parallax__layer--base, #group2 .parallax__layer--base, #group4 .parallax__layer--base, #group6 .parallax__layer--base, #group8 .parallax__layer--base, #group10 .parallax__layer--base, #group12 .parallax__layer--base, #group14 .parallax__layer--base, #group16 .parallax__layer--base, #group18 .parallax__layer--base, #group20 .parallax__layer--base
+{
+    background: #FFD700;
+    color: white;
+  }
+
+
+
+  #group3 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/qkoec8ppb/Opdracht9_Banks.jpg");
+    background-size: cover;
+  }
+
+  #group5 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/3kmcdnh9b/Opdracht9_Board_X.jpg");
+    background-size: cover;
+  }
+
+  #group7 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/4qqccg5jz/Opdracht9_Collectif.jpg");
+    background-size: cover;
+  }
+
+   #group9 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/qi9435bfj/Opdracht9_OFFF.jpg");
+    background-size: cover;
+  }
+
+   #group11 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/671uul8gv/Opdracht9_Exit.jpg");
+    background-size: cover;
+  }
+
+  #group13 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/ob4vf865b/Opdracht9_Kolsch.jpg");
+    background-size: cover;
+  }
+
+  #group15 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/pxu30gi73/Opdracht9_Bon_Iver.jpg");
+    background-size: cover;
+  }
+
+  #group17 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/3n680hkwv/Opdracht9_Clinckx.jpg");
+    background-size: cover;
+  }
+
+  #group19 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/l845bur6n/Opdracht9_PKP.jpg");
+    background-size: cover;
+  }
+
+  #group21 .parallax__layer--back{
+    background-image: url("https://s25.postimg.org/ef3sfl0db/Opdracht9_Mercado.jpg");
+    background-size: cover;
+  }
